@@ -7,5 +7,6 @@ app.listen(3000, () => {
 });
 
 app.get("/", (req, res) => {
-  res.json({ name: "arjun" });
+  console.log(path.resolve(__dirname, "index.html"));
+  res.sendFile(path.resolve(__dirname, "index.html"));
 });
